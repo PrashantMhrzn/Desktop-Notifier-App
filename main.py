@@ -1,7 +1,12 @@
-import requests
-from datetime import date
-import time
-from plyer import notification
+try:
+    import requests
+    from datetime import date
+    import time
+    from plyer import notification
+except ModuleNotFoundError:
+    print('Modules not found. Please run pip install -r requirements.txt to install the required modules.')
+    exit()
+
 
 data = None
 try:
