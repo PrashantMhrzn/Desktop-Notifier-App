@@ -33,4 +33,4 @@ while True:
     )
 
     # Shows notification after every 3 hours
-    time.sleep(1)  
+    time.sleep(60*60*3)  
