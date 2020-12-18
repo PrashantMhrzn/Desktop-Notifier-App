@@ -18,14 +18,13 @@ if data != None:
     text = data.json()
 
 
-tested_total = text['tested_total']
-tested_positive = text['tested_positive']
-tested_negative = text['tested_negative']
-recovered = text['recovered']
-deaths = text['deaths']
-
-
 while True:
+    tested_total = text['tested_total']
+    tested_positive = text['tested_positive']
+    tested_negative = text['tested_negative']
+    recovered = text['recovered']
+    deaths = text['deaths']
+
     notification.notify(
         title=f'COVID-19 status of Nepal on {date.today()}',
         message=f'Total Tested:{tested_total}\nTotal Positive:{tested_positive}\nTotal Negative:{tested_negative}\nRecovered:{recovered}\nDeaths:{deaths}',
@@ -34,4 +33,4 @@ while True:
     )
 
     # Shows notification after every 3 hours
-    time.sleep(60*60*3)  
+    time.sleep(1)  
